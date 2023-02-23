@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <div class="rightSide">
+            <div class="btns dayNight">
+                <i class="ri-moon-line"></i>
+                <i class="ri-sun-line"></i>
+            </div>
+            <div class="btns menuToggle">
+                <i class="ri-menu-line"></i>
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <video src="video.mp4" autoplay loop muted type="mp4"></video>
+        <img src="mask.jpg" class="mask">
+        <h2>Ocean</h2>
+        <p class="copyrightText">&copy; Copyright 2023</p>
+        <ul class="sci">
+            <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+            <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+            <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+        </ul>
+    </section>
+    <!-- Sidebar -->
+    <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Package</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <script>
+        let dayNight = document.querySelector('.dayNight')
+        let menuToggle = document.querySelector('.menuToggle')
+        let body = document.querySelector('body')
+        let navigation = document.querySelector('.navigation')
+
+        dayNight.onclick = function(){
+            body.classList.toggle('dark')
+            dayNight.classList.toggle('active')
+        }
+
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
